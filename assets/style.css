@@ -550,6 +550,12 @@ form .send-btn:hover {
     --h1-font: 2rem;
     --h2-font: 1.7rem;
   }
+  .logo {
+    font-size: 20px;
+  }
+  .main-content {
+    padding-top: 50px;
+  }
   .about img {
     text-align: center;
     width: 100%;
@@ -558,5 +564,14 @@ form .send-btn:hover {
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto;
+  }
+  form .send-btn {
+    width: 150px;
+  }
+  .footer {
+    font-size: 12px;
+  }
+  .hero {
+    background: var(--bg-color);
   }
 }
