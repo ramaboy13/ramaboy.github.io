@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
     <title>RamaBoy</title>
-    <link rel="icon" href="img/icon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="assets/style.css" />
 
     <!--link icon box-->
@@ -24,14 +24,18 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
+    <!--Github Calendar-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
     <!--Link Aos Animation-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!--header section-->
     <header>
-      <a href="#" class="logo">My <span>Portofolio</span></a>
+      <a href="#" class="logo">B<span>S</span>R</a>
 
       <div class="bx bx-menu" id="menu-icon"></div>
       <ul class="nav-list">
@@ -49,15 +53,9 @@
     <!--Hero Section-->
     <section class="hero" id="home">
       <div class="main-content" data-aos="zoom-out-up">
-        <h4>Hi, There!</h4>
-        <h1>I'm <span>Barito Surya Ramadhani</span></h1>
-        <p>
-          Welcome to My Portfolio. I am an Informatics Engineering student
-          skilled in software development, system design, mobile and web
-          development, and UI/UX. I am passionate about learning new things and
-          staying updated in my field, continually working to create innovative
-          and efficient solutions.
-        </p>
+        <h4 id="line1"></h4>
+        <h1 id="line2"></h1>
+        <p id="line3" class="job"></p>
         <div class="medsos">
           <a href="https://www.instagram.com/ramaboy_13/"
             ><i class="ri-instagram-fill"></i
@@ -91,19 +89,29 @@
       </div>
 
       <div class="about-text" data-aos="zoom-in-up">
-        <h2>
-          I am Product <span>Designer</span> <br />
-          & <span>Web</span> Developer
-        </h2>
+        <h2><span>About</span> me</h2>
         <div class="exp-area">
+          <p class="exp" style="text-align: justify">
+            <span
+              >I am an Informatics Engineering student skilled in software
+              development, system design, mobile and web development, and UI/UX.
+              I am passionate about learning new things and staying updated in
+              my field, continually working to create innovative and efficient
+              solutions.
+            </span>
+          </p>
+          <hr />
           <p class="exp">
             Experience :
-            <span>1 Years</span>
+            <span>2 year</span>
           </p>
-
           <p class="exp">
             Specialty :
-            <span>Product Designer, Developer</span>
+            <span>Product Designer, Web Developer</span>
+          </p>
+          <p class="exp">
+            Specialty :
+            <span>Product Designer, Web Developer</span>
           </p>
 
           <p class="exp">
@@ -132,45 +140,6 @@
       </div>
     </section>
 
-    <!--Services Section-->
-    <section class="services" id="services">
-      <div class="center-text" data-aos="fade-down">
-        <h2>My <span>Services</span></h2>
-      </div>
-
-      <div class="services-content" data-aos="zoom-in-up">
-        <div class="box">
-          <img src="img/figma.svg" alt="figma-logo" />
-          <h3>UI/UX Design</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sint id
-            illum nihil atque maxime ipsa aliquam molestiae a!
-          </p>
-          <a href="#">Download now <i class="ri-arrow-right-line"></i></a>
-        </div>
-
-        <div class="box">
-          <img src="img/designer.svg" alt="Designer-logo" />
-          <h3>Product Design</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sint id
-            illum nihil atque maxime ipsa aliquam molestiae a!
-          </p>
-          <a href="#">Download now <i class="ri-arrow-right-line"></i></a>
-        </div>
-
-        <div class="box">
-          <img src="img/code.svg" alt="Code-logo" />
-          <h3>Web Developer</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sint id
-            illum nihil atque maxime ipsa aliquam molestiae a!
-          </p>
-          <a href="#">Download now <i class="ri-arrow-right-line"></i></a>
-        </div>
-      </div>
-    </section>
-
     <!--Portofolio-->
     <section class="portofolio" id="portofolio">
       <div class="center-text" data-aos="fade-down">
@@ -179,82 +148,158 @@
 
       <div class="portofolio-content" data-aos="zoom-in-up">
         <div class="row">
-          <img src="img/1.jpg" alt="porto-1" />
+          <img src="img/kajifilm.png" alt="porto-1" style="height: 200px" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Design</h5>
+              <h5>Web Developer</h5>
             </div>
             <div class="row-icon">
-              <i class="ri-github-fill"></i>
+              <a href="https://github.com/ramaboy13/kajifilm"
+                ><i class="ri-github-fill"></i
+              ></a>
             </div>
           </div>
-          <h4>Website Development for Dark</h4>
+          <h4>Website Kajifilm - Full Stack Developer</h4>
         </div>
 
         <div class="row">
-          <img src="img/2.jpg" alt="porto-2" />
+          <img
+            src="img/sadarstunting.png"
+            alt="porto-2"
+            style="height: 200px"
+          />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Design</h5>
+              <h5>Web Developer</h5>
             </div>
             <div class="row-icon">
-              <i class="ri-github-fill"></i>
+              <a href="https://github.com/ramaboy13/sadar-stunting"
+                ><i class="ri-github-fill"></i
+              ></a>
             </div>
           </div>
-          <h4>Website Development for Dark</h4>
+          <h4>Website Sadar Stunting - Full Stack Developer</h4>
         </div>
 
         <div class="row">
-          <img src="img/3.jpg" alt="porto-3" />
+          <img src="img/wolfkiller.png" alt="porto-3" style="height: 200px" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Design</h5>
+              <h5>Web Developer</h5>
             </div>
             <div class="row-icon">
-              <i class="ri-github-fill"></i>
+              <a href="https://github.com/ramaboy13/LandingPage_Sederhana"
+                ><i class="ri-github-fill"></i
+              ></a>
             </div>
           </div>
-          <h4>Website Development for Dark</h4>
+          <h4>Company Web - Front End Developer</h4>
         </div>
 
         <div class="row">
-          <img src="img/4.jpg" alt="porto-4" />
+          <img src="img/puzzle.png" alt="porto-4" style="height: 200px" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Design</h5>
+              <h5>Mini Game</h5>
             </div>
             <div class="row-icon">
-              <i class="ri-github-fill"></i>
+              <a href=""><i class="ri-github-fill"></i></a>
             </div>
           </div>
-          <h4>Website Development for Dark</h4>
+          <h4>Maze Game - Full Stack Developer</h4>
         </div>
 
         <div class="row">
-          <img src="img/5.jpg" alt="porto-5" />
+          <img src="img/food.png" alt="porto-5" style="height: 200px" />
           <div class="main-row">
             <div class="row-text">
-              <h5>Website Design</h5>
+              <h5>Website Developer</h5>
             </div>
             <div class="row-icon">
-              <i class="ri-github-fill"></i>
+              <a href="https://github.com/ramaboy13/kkn-desa-soneyan"
+                ><i class="ri-github-fill"></i
+              ></a>
             </div>
           </div>
-          <h4>Website Development for Dark</h4>
+          <h4>Website Healthy Food - Frontend Developer</h4>
         </div>
+      </div>
+    </section>
 
-        <div class="row">
-          <img src="img/6.jpg" alt="porto-6" />
-          <div class="main-row">
-            <div class="row-text">
-              <h5>Website Design</h5>
-            </div>
-            <div class="row-icon">
-              <i class="ri-github-fill"></i>
-            </div>
-          </div>
-          <h4>Website Development for Dark</h4>
+    <!--My Skilss-->
+    <section class="skills-section">
+      <div class="center-text" data-aos="fade-down">
+        <h2>Profesional <span>Skillset</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/c++.png" alt="C++" />
         </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/python.png" alt="Python" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/html.png" alt="HTML5" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/css.png" alt="CSS3" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/bootstrap.png" alt="Bootstrap" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/laravel.png" alt="Laravel" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/tailwind.png" alt="Tailwind" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/figma.png" alt="JavaScript" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/git.png   " alt="Git" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/JS.png   " alt="Git" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/nodejs.png   " alt="Git" />
+        </div>
+        <div class="skill-item" data-aos="flip-up">
+          <img src="img/skill/vuejs.png   " alt="Git" />
+        </div>
+      </div>
+    </section>
+
+    <!--Section Tools-->
+    <section class="tools-section">
+      <div class="center-text" data-aos="fade-down">
+        <h2><span>Tools </span> I use</h2>
+      </div>
+      <div class="tools-grid" data-aos="flip-right">
+        <div class="tools-item">
+          <img src="img/tools/windows11.png" alt="windows11" />
+          <h1>WINDOWS 11</h1>
+        </div>
+        <div class="tools-item">
+          <img src="img/tools/vscode.png" alt="vscode" />
+          <h1>VSCODE</h1>
+        </div>
+        <div class="tools-item">
+          <img src="img/tools/postman.png" alt="postman" />
+          <h1>POSTMAN</h1>
+        </div>
+      </div>
+    </section>
+
+    <!--Github Contributed Section-->
+    <section class="github-section">
+      <div class="center-text" data-aos="fade-down">
+        <h2>Days <span>I Code</span></h2>
+      </div>
+      <div class="calendar-container" data-aos="slide-up">
+        <!-- Loading stuff -->
+        Loading the data just for you.
       </div>
     </section>
 
@@ -309,6 +354,15 @@
         offset: 300,
         duration: 1400,
       });
+    </script>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <script>
+      GitHubCalendar(".calendar-container", "ramaboy13");
+
+      // or enable responsive functionality:
+      GitHubCalendar(".calendar-container", "ramaboy13", { responsive: true });
+
+      // Use a proxy
     </script>
   </body>
 </html>
