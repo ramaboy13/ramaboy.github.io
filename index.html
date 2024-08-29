@@ -45,8 +45,10 @@
         <li><a href="#portofolio">Portofolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="top-btnn">
-        <a href="mailto:baritosurya13@gmail.com" class="h-btn">Contact me</a>
+      <div class="theme-toggle">
+        <button id="toggle-dark-mode" type="button">
+          <i class="ri-moon-fill active"></i> <i class="ri-sun-fill"></i>
+        </button>
       </div>
     </header>
 
@@ -415,15 +417,38 @@
           });
         });
       });
+
+      const toggleButton = document.getElementById("toggle-dark-mode");
+      const currentTheme = localStorage.getItem("theme");
+
+      if (currentTheme) {
+        document.documentElement.className = currentTheme;
+
+        if (currentTheme === "light-mode") {
+          toggleButton.querySelector(".ri-sun-fill").classList.add("active");
+        } else {
+          toggleButton.querySelector(".ri-moon-fill").classList.add("active");
+        }
+      }
+
+      toggleButton.addEventListener("click", function () {
+        if (document.documentElement.classList.contains("dark-mode")) {
+          document.documentElement.className = "light-mode";
+          localStorage.setItem("theme", "light-mode");
+          this.querySelector(".ri-sun-fill").classList.add("active");
+          this.querySelector(".ri-moon-fill").classList.remove("active");
+        } else {
+          document.documentElement.className = "dark-mode";
+          localStorage.setItem("theme", "dark-mode");
+          this.querySelector(".ri-moon-fill").classList.add("active");
+          this.querySelector(".ri-sun-fill").classList.remove("active");
+        }
+      });
     </script>
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <!-- Include the library. -->
+    <script src="https://unpkg.com/github-calendar/dist/github-calendar.min.js"></script>
     <script>
-      GitHubCalendar(".calendar-container", "ramaboy13");
-
-      // or enable responsive functionality:
       GitHubCalendar(".calendar-container", "ramaboy13", { responsive: true });
-
-      // Use a proxy
     </script>
   </body>
 </html>

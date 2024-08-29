@@ -14,10 +14,19 @@
   --second-bg-color: #22282f;
   --main-color: #1362ff;
   --other-color: #c3cad5;
-
+  --row-color: #2d343f;
   --h1-font: 3.2rem;
   --h2-font: 2.9rem;
   --p-font: 1.2rem;
+}
+/* Light mode variables */
+.light-mode {
+  --text-color: #000;
+  --bg-color: #f5f5f5;
+  --second-bg-color: #ffffff;
+  --main-color: #007bff;
+  --other-color: #555555;
+  --row-color: #ebebeb;
 }
 body {
   color: var(--text-color);
@@ -64,6 +73,42 @@ span {
   color: var(--main-color);
   text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
 }
+.theme-toggle {
+  /* ... existing styles ... */
+}
+
+.theme-toggle button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex; /* Allow icons to be side-by-side */
+}
+
+.theme-toggle .ri-moon-fill,
+.theme-toggle .ri-sun-fill {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  /* Tambahkan display: none untuk menyembunyikan keduanya secara default */
+  display: none;
+}
+
+.theme-toggle .ri-moon-fill.active {
+  display: inline-block; /* Tampilkan icon moon saat dark mode aktif */
+}
+
+.theme-toggle .ri-sun-fill.active {
+  display: inline-block; /* Tampilkan icon sun saat light mode aktif */
+}
+
+/* Dark mode styles (if applicable) */
+.dark-mode {
+  .theme-toggle .ri-moon-fill.active,
+  .theme-toggle .ri-sun-fill:not(.active) {
+    opacity: 1; /* Swap icon visibility in dark mode */
+    color: var(--other-color); /* Adjust icon color for dark mode */
+  }
+}
 
 #menu-icon {
   font-size: 35px;
@@ -72,7 +117,7 @@ span {
   display: none;
 }
 
-.h-btn {
+.top-btn {
   display: inline-block;
   padding: 11px 26px;
   background: transparent;
@@ -84,7 +129,7 @@ span {
   transform: all 0.5s ease;
 }
 
-.h-btn:hover {
+.top-btn:hover {
   background: var(--main-color);
   color: var(--text-color);
   box-shadow: 0 0 20px var(--main-color);
@@ -124,7 +169,6 @@ section {
 .main-content .job {
   font-size: var(--p-font);
   font-weight: 400;
-  width: 620px;
   max-width: 100%;
   color: var(--other-color);
   line-height: 30px;
@@ -263,7 +307,7 @@ section {
 }
 
 .row {
-  background: #2d343f;
+  background: var(--row-color);
   border-radius: 28px;
   border: 1px solid transparent;
   box-shadow: 0 0 5px var(--main-color);
@@ -383,19 +427,24 @@ section {
   color: #fff;
   background: var(--second-bg-color);
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Specific styles for the calendar container */
 .calendar-container {
-  display: inline-block;
+  justify-content: center;
+  align-items: center;
   background: var(--bg-color); /* Match background color */
   padding: 20px;
   border-radius: 10px;
   border: 3px solid var(--main-color); /* Purple border */
   overflow: hidden;
   color: white; /* Text color adjustment */
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 30px;
+  margin: 20px auto; /* Adjust margin to center container */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .contact {
   background: var(--bg-color);
@@ -419,7 +468,7 @@ form textarea {
   border: none;
   outline: none;
   box-shadow: 0 0 5px var(--main-color);
-  background: #2d343f;
+  background: var(--row-color);
   color: var(--text-color);
   margin-bottom: 20px;
   border-radius: 8px;
@@ -478,6 +527,7 @@ form .send-btn:hover {
   font-size: 27px;
 }
 
+/* Responsive adjustments */
 @media (max-width: 1700px) {
   header {
     padding: 20px 8%;
@@ -586,6 +636,9 @@ form .send-btn:hover {
   .main-content p {
     width: 100%;
   }
+  .top-btn {
+    display: none;
+  }
 }
 
 @media (max-width: 470px) {
@@ -598,6 +651,8 @@ form .send-btn:hover {
   }
   .main-content {
     padding-top: 50px;
+    text-align: center;
+    justify-content: center;
   }
   .about img {
     text-align: center;
@@ -616,5 +671,8 @@ form .send-btn:hover {
   }
   .hero {
     background: var(--bg-color);
+  }
+  .row {
+    margin-right: 10px;
   }
 }

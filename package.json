@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "github-calendar": "^2.3.4"
+    "github-calendar": "^2.3.4",
+    "github-calendar-graph": "^0.2.8"
   },
   "devDependencies": {
     "vite": "^5.4.2"
