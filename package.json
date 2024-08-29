@@ -1,5 +1,13 @@
 {
   "dependencies": {
     "github-calendar": "^2.3.4"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   }
 }
