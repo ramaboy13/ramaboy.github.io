@@ -527,6 +527,10 @@ form .send-btn:hover {
   font-size: 27px;
 }
 
+.head-text h2 {
+  color: var(--text-color);
+  font-size: var(--h2-font);
+}
 /* Responsive adjustments */
 @media (max-width: 1700px) {
   header {
