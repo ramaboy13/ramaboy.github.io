@@ -74,7 +74,7 @@ span {
   text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
 }
 .theme-toggle {
-  /* ... existing styles ... */
+  /* Styling umum untuk tombol */
 }
 
 .theme-toggle button {
@@ -82,32 +82,22 @@ span {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  display: flex; /* Allow icons to be side-by-side */
+  display: flex;
 }
 
 .theme-toggle .ri-moon-fill,
 .theme-toggle .ri-sun-fill {
   font-size: 1.5rem;
   color: var(--text-color);
-  /* Tambahkan display: none untuk menyembunyikan keduanya secara default */
-  display: none;
+  display: none; /* Sembunyikan ikon secara default */
 }
 
 .theme-toggle .ri-moon-fill.active {
-  display: inline-block; /* Tampilkan icon moon saat dark mode aktif */
+  display: inline-block; /* Tampilkan ikon moon hanya saat mode dark aktif */
 }
 
 .theme-toggle .ri-sun-fill.active {
-  display: inline-block; /* Tampilkan icon sun saat light mode aktif */
-}
-
-/* Dark mode styles (if applicable) */
-.dark-mode {
-  .theme-toggle .ri-moon-fill.active,
-  .theme-toggle .ri-sun-fill:not(.active) {
-    opacity: 1; /* Swap icon visibility in dark mode */
-    color: var(--other-color); /* Adjust icon color for dark mode */
-  }
+  display: inline-block; /* Tampilkan ikon sun hanya saat mode light aktif */
 }
 
 #menu-icon {
@@ -165,6 +155,9 @@ section {
 .main-content h4 {
   text-align: center;
 }
+.main-content p {
+  text-align: center;
+}
 
 .main-content .job {
   font-size: var(--p-font);
@@ -177,7 +170,10 @@ section {
 
 .medsos {
   margin-bottom: 40px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center; /* Tambahkan ini untuk meratakan ke tengah */
 }
 
 .medsos i {
@@ -198,6 +194,11 @@ section {
 .medsos i:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px var(--main-color);
+}
+.main-btn {
+  display: flex;
+  justify-content: center; /* Untuk meratakan tombol ke tengah */
+  align-items: center;
 }
 .btn {
   display: inline-block;
@@ -321,29 +322,20 @@ section {
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
-.row h5 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--other-color);
-}
 
-.row i {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 55px;
-  height: 55px;
-  font-size: 17px;
-  border-radius: 50%;
-  color: var(--text-color);
-  background: #075fe4;
-}
-
-.row h4 {
+.row-h {
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
   line-height: 1.4;
+  color: var(--text-color);
+}
+.row p {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 .row:hover {
@@ -417,9 +409,12 @@ section {
   max-width: 60%;
   max-height: 60%;
 }
-
 .tools-item:hover {
   transform: scale(1.1);
+}
+
+.tools-text {
+  color: var(--text-color);
 }
 
 .github-section {
@@ -642,6 +637,22 @@ form .send-btn:hover {
   }
   .top-btn {
     display: none;
+  }
+  .exp-area {
+    margin-bottom: 30px;
+  }
+
+  .exp-area p {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left; /* Agar lebih rapi di mobile */
+    margin-bottom: 15px; /* Menambahkan margin bawah agar antar teks lebih rapi */
+  }
+
+  .exp-area p span {
+    font-size: 15px;
+    margin-left: 5px;
+    display: inline-block; /* Membuat teks lebih teratur dan rata */
   }
 }
 
