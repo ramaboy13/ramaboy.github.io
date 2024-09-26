@@ -254,6 +254,7 @@ section {
   object-fit: cover;
   border: 7px solid var(--main-color);
   box-shadow: 0 0 20px var(--main-color);
+  /* filter: drop-shadow(2px 2px 20px var(--main-color)); */
 }
 
 .about-text h2 {
@@ -568,6 +569,9 @@ form .send-btn:hover {
   .box {
     padding: 40px 40px 46px;
   }
+  .hero {
+    height: 100vh;
+  }
   .box img {
     width: 100%;
     height: 60px;
@@ -603,6 +607,9 @@ form .send-btn:hover {
 @media (max-width: 950px) {
   :root {
     --h1-font: 2.2rem;
+  }
+  .hero {
+    height: 100vh;
   }
   .medsos {
     margin-top: 20px;
@@ -664,6 +671,9 @@ form .send-btn:hover {
   .logo {
     font-size: 20px;
   }
+  .hero {
+    height: 100vh;
+  }
   .main-content {
     padding-top: 50px;
     text-align: center;
@@ -689,5 +699,11 @@ form .send-btn:hover {
   }
   .row {
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    height: 100vh;
   }
 }
