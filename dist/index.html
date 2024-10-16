@@ -438,6 +438,10 @@
       const toggleButton = document.getElementById("toggle-dark-mode");
       const currentTheme = localStorage.getItem("theme");
 
+      // Reset classes sebelum menentukan tema
+      toggleButton.querySelector(".ri-moon-fill").classList.remove("active");
+      toggleButton.querySelector(".ri-sun-fill").classList.remove("active");
+
       if (currentTheme) {
         document.documentElement.className = currentTheme;
 
@@ -446,6 +450,10 @@
         } else {
           toggleButton.querySelector(".ri-moon-fill").classList.add("active");
         }
+      } else {
+        // Default ke dark-mode jika tidak ada tema tersimpan
+        document.documentElement.className = "dark-mode";
+        toggleButton.querySelector(".ri-moon-fill").classList.add("active");
       }
 
       toggleButton.addEventListener("click", function () {
