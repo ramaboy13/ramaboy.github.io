@@ -139,11 +139,113 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative; /* Memastikan positioning untuk z-index */
 }
+
 .main-content {
   font-size: 1.6rem;
   justify-content: center;
   align-items: center;
+  position: relative; /* Tetap di atas */
+  z-index: 4; /* Pastikan elemen ini di atas background */
+}
+
+.absolute {
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
+  z-index: -1; /* Background shapes di bawah main content */
+  pointer-events: none; /* Tidak menangkap klik mouse */
+}
+
+.bg-shape1 {
+  width: 400px;
+  height: 400px;
+  top: -50px; /* Sesuaikan posisi */
+  left: -100px; /* Sesuaikan posisi */
+  animation: moveShape1 15s infinite alternate;
+}
+
+.bg-shape2 {
+  width: 300px;
+  height: 300px;
+  top: 50px; /* Sesuaikan posisi */
+  right: -50px; /* Sesuaikan posisi */
+  animation: moveShape2 20s infinite alternate;
+}
+
+@keyframes moveShape1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-120px, 80px);
+  }
+  40% {
+    transform: translate(50px, -30px);
+  }
+  60% {
+    transform: translate(-40px, 150px);
+  }
+  80% {
+    transform: translate(30px, -70px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveShape2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(80px, -50px);
+  }
+  35% {
+    transform: translate(-60px, 40px);
+  }
+  55% {
+    transform: translate(100px, 100px);
+  }
+  75% {
+    transform: translate(-90px, -60px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.bg-blur {
+  filter: blur(90px);
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.bg-primary {
+  background-color: rgba(19, 98, 255, 0.6); /* Warna biru dengan transparansi */
+}
+
+.bg-teal {
+  background-color: rgba(
+    19,
+    98,
+    255,
+    0.6
+  ); /* Warna biru yang sama dengan transparansi */
+}
+
+.bg-purple {
+  background-color: rgba(
+    19,
+    98,
+    255,
+    0.6
+  ); /* Warna biru yang sama dengan transparansi */
 }
 
 .main-content h1 {
