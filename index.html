@@ -386,6 +386,10 @@
       };
 
       function MessageToWhatsapp() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value; 
+        const pesan = document.getElementById("pesan").value; 
+
         const urlToWhatsapp = `https://wa.me/+6285775242278?text=Halo nama saya, ${name.value}, email saya ${email.value}, ${pesan.value}`;
 
         window.open(urlToWhatsapp, "_blank");
